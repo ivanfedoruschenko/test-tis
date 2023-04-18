@@ -1,0 +1,12 @@
+.main{
+  max-width: 1512px;
+  width: 89%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @media (min-width: $screen-1280){
+    width: 82.5%;
+  }
+}

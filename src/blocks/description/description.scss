@@ -1,0 +1,92 @@
+.description{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  &__chapter{
+    display: none;
+
+    @media (min-width: $screen-768){
+      display: flex;
+      margin: 82px 0 0;
+    }
+  }
+
+  &__chapter-element{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $text-white-color;
+    margin: 0;
+  }
+
+  &__chapter-element_color_yellow{
+    color: $text-yellow-color;
+  }
+
+  &__point{
+    background-image: url("../../../src/blocks/description/description__point.svg");
+    align-self: center;
+    margin: 0 9px 0 8px;
+    width: 4px;
+    height: 4px;
+  }
+
+  &__title{
+    margin: 39px 0 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: $text-white-color;
+
+    @media (min-width: $screen-768){
+      margin-top: 48px;
+      font-size: 34px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $screen-1024){
+      margin-top: 98px;
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    span{
+      color: $text-yellow-color;
+    }
+  }
+
+  &__button-container{
+    margin: 55px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (min-width: $screen-768){
+      margin-top: 32px;
+      flex-direction: row;
+    }
+
+    @media (min-width: $screen-1024){
+      margin-top: 24px;
+    }
+  }
+
+  &__button{
+    width: 100%;
+    height: 44px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+
+    @media (min-width: $screen-768){
+      max-width: 274px;
+
+      &:nth-child(2){
+        width: 161px;
+      }
+    }
+  }
+}

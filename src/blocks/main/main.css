@@ -1,0 +1,10 @@
+.main {
+  max-width: 1512px;
+  width: 89%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */
