@@ -39,7 +39,7 @@
 }
 .header__background {
   position: absolute;
-  background-image: url("../../../src/blocks/header/header__background_mobile.svg");
+  background-image: url("../../src/blocks/header/header__background_mobile.svg");
   width: 100%;
   top: 0;
   left: 0;
@@ -51,13 +51,13 @@
 }
 @media (min-width: 425px) {
   .header__background {
-    background-image: url("../../../src/blocks/header/header__background_laptop.jpg");
+    background-image: url("../../src/blocks/header/header__background_laptop.jpg");
     aspect-ratio: 768/735;
   }
 }
 @media (min-width: 1024px) {
   .header__background {
-    background-image: url("../../../src/blocks/header/header__background_desktop.jpg");
+    background-image: url("../../src/blocks/header/header__background_desktop.jpg");
     aspect-ratio: 1512/738;
   }
 }
@@ -234,7 +234,7 @@
   color: #F1B83B;
 }
 .description__point {
-  background-image: url("../../../src/blocks/description/description__point.svg");
+  background-image: url("../../src/blocks/description/description__point.svg");
   align-self: center;
   margin: 0 9px 0 8px;
   width: 4px;
@@ -417,7 +417,7 @@
   max-width: 1512px;
 }
 .conclusion__container {
-  background-image: url("../../../src/blocks/conclusion/conclusion__background_mobile.svg");
+  background-image: url("../../src/blocks/conclusion/conclusion__background_mobile.svg");
   width: 100%;
   aspect-ratio: 286/710;
   background-repeat: no-repeat;
@@ -429,14 +429,14 @@
 }
 @media (min-width: 768px) {
   .conclusion__container {
-    background-image: url("../../../src/blocks/conclusion/conclusion__background_laptop.svg");
+    background-image: url("../../src/blocks/conclusion/conclusion__background_laptop.svg");
     aspect-ratio: 704/558;
     min-width: 704px;
   }
 }
 @media (min-width: 1280px) {
   .conclusion__container {
-    background-image: url("../../../src/blocks/conclusion/conclusion__background_desktop.svg");
+    background-image: url("../../src/blocks/conclusion/conclusion__background_desktop.svg");
     aspect-ratio: 1248/540;
   }
 }
@@ -858,7 +858,7 @@
   }
 }
 .footer__lable {
-  background-image: url("../../../src/blocks/footer/footer__lable.svg");
+  background-image: url("../../src/blocks/footer/footer__lable.svg");
   position: absolute;
   bottom: 0;
   left: 5.5%;

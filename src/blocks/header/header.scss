@@ -25,7 +25,7 @@
 
   &__background{
     position: absolute;
-    background-image: url("../../../src/blocks/header/header__background_mobile.svg");
+    background-image: url("../../src/blocks/header/header__background_mobile.svg");
     width: 100%;
     top: 0;
     left: 0;
@@ -36,12 +36,12 @@
     z-index: -1;
 
     @media  (min-width: $screen-425) {
-      background-image: url("../../../src/blocks/header/header__background_laptop.jpg");
+      background-image: url("../../src/blocks/header/header__background_laptop.jpg");
       aspect-ratio: 768/735;
     }
 
     @media  (min-width: $screen-1024) {
-      background-image: url("../../../src/blocks/header/header__background_desktop.jpg");
+      background-image: url("../../src/blocks/header/header__background_desktop.jpg");
       aspect-ratio: 1512/738;
     }
   }

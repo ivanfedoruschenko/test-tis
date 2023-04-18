@@ -6,7 +6,7 @@
   max-width: 1512px;
 
   &__container{
-    background-image: url("../../../src/blocks/conclusion/conclusion__background_mobile.svg");
+    background-image: url("../../src/blocks/conclusion/conclusion__background_mobile.svg");
     width: 100%;
     aspect-ratio: 286/710;
     background-repeat: no-repeat;
@@ -17,13 +17,13 @@
     align-items: center;
 
     @media (min-width: $screen-768){
-      background-image: url("../../../src/blocks/conclusion/conclusion__background_laptop.svg");
+      background-image: url("../../src/blocks/conclusion/conclusion__background_laptop.svg");
       aspect-ratio: 704/558;
       min-width: 704px;
     }
 
     @media (min-width: $screen-1280){
-      background-image: url("../../../src/blocks/conclusion/conclusion__background_desktop.svg");
+      background-image: url("../../src/blocks/conclusion/conclusion__background_desktop.svg");
       aspect-ratio: 1248/540;
     }
   }
