@@ -1,26 +1,28 @@
 .header{
-  max-width: 1512px;
   width: 89%;
   margin: 0 auto;
+  max-width: 1512px;
   display: flex;
-  box-sizing: border-box;
-  
-  @media  (min-width: $screen-375) {
-      justify-content: space-between;
-  }
+  flex-direction: column;
 
   @media  (min-width: $screen-1280) {
     width: 82.5%;
   }
 
-  @media  (min-width: $screen-1513) {
-    position: relative;
-  }
-
-
   a{
     text-decoration: none;
     color: $text-white-color;
+  }
+
+  &__wrapper{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+
+    @media  (min-width: $screen-375) {
+      justify-content: space-between;
+    }
+
   }
 
   &__background{
@@ -29,7 +31,6 @@
     width: 100%;
     top: 0;
     left: 0;
-    max-width: 1512px;
     aspect-ratio: 320/725;
     background-size: cover;
     background-repeat: no-repeat;
@@ -126,9 +127,6 @@
   &__button{
     width: 160px;
     height: 40px;
-  }
-
-  &__button{
     display: none !important;
     font-weight: 500;
     font-size: 14px;
@@ -139,8 +137,8 @@
     }
   }
 
-  &__button:nth-child(1){
-    margin-right: 16px;
+  &__button:nth-child(even){
+    margin-left: 16px;
   }
 
   &__burger{
