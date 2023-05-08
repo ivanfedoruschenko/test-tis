@@ -1,28 +1,18 @@
+@import "../../variables/mixins.scss";
+
 .header{
-  width: 89%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1512px;
+  min-width: 288px;
   display: flex;
   flex-direction: column;
-
-  @media  (min-width: $screen-1280) {
-    width: 82.5%;
-  }
-
-  a{
-    text-decoration: none;
-    color: $text-white-color;
-  }
+  box-sizing: border-box;
 
   &__wrapper{
     width: 100%;
     display: flex;
     margin: 0 auto;
-
-    @media  (min-width: $screen-375) {
-      justify-content: space-between;
-    }
-
+    justify-content: space-between;
   }
 
   &__background{
@@ -31,32 +21,37 @@
     width: 100%;
     top: 0;
     left: 0;
-    aspect-ratio: 320/725;
+    min-height: 690px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
 
-    @media  (min-width: $screen-425) {
+
+    @include laptop{
       background-image: url("../../src/blocks/header/header__background_laptop.jpg");
-      aspect-ratio: 768/735;
+      min-height: 997px;
     }
 
-    @media  (min-width: $screen-1024) {
+    @include desktop{
       background-image: url("../../src/blocks/header/header__background_desktop.jpg");
-      aspect-ratio: 1512/738;
+      min-height: 1043px;
     }
   }
 
   &__container{
-    max-width: 48%;
+    width: 100%;
     display: flex;
     margin: 0;
-    justify-content: space-between;
     align-items: center;
-  }
 
-  &__container:nth-child(3){
-    margin-left: 28px;
+
+    &:nth-child(3){
+      justify-content: end;
+    }
+
+    @include desktop{
+      gap: 16px;
+    }
   }
 
   &__logo{
@@ -65,14 +60,14 @@
     width: 96px;
     height: 52px;
 
-    @media (min-width: $screen-768){
+    @include laptop{
       width: 128px;
-      height: 72px;
+      height: 69px;
     }
 
-    @media (min-width: $screen-1280){
+    @include desktop{
       width: 148px;
-      height: 84px;
+      height: 80px;
     }
   }
 
@@ -80,39 +75,38 @@
     display: none;
     align-items: center;
 
-    @media (min-width: $screen-1280){
-    display: flex;
+    @include desktop{
+      display: flex;
+      margin: 0 0 0 2.6%;
+      gap: 16px;
     }
-  }
-
-  &__menu{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 32px;
-
   }
 
   &__element{
     color: $text-white-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    min-width: 120px;
+    margin: 0;
+    padding: 0;
+    min-width: 94px;
+    @include fonts(11px,21px,500);
 
-    @media (min-width: $screen-768){
-      font-size: 16px;
+    @include laptop{
+      @include fonts(16px,21px,500)
     }
 
-    @media (min-width: $screen-1024){
-      min-width: auto;
+    @include desktop{
+      display: inline-block;
+      max-width: 120px;
       font-size: 14px;
+      box-sizing: border-box;
     }
   }
 
-  &__element:nth-child(even){
-    margin: 0 16px;
+  &__element:nth-child(2){
+    display: none !important;
+
+    @include desktop-mw{
+      display: inline-block !important;
+    }
   }
 
   &__element_style_underline{
@@ -124,6 +118,16 @@
     }
   }
 
+  &__link{
+    color: $text-white-color;
+    margin: 0;
+    text-decoration: none;
+
+    &_active{
+      color: $text-yellow-color;
+    }
+  }
+
   &__button{
     width: 160px;
     height: 40px;
@@ -131,28 +135,28 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 
-    @media (min-width: $screen-1280){
+    @include desktop{
       display: flex !important;
     }
   }
 
-  &__button:nth-child(even){
-    margin-left: 16px;
-  }
-
   &__burger{
-    margin-left: 4px;
+    margin: 0 0 0 4px;
     width: 38px;
     height: 38px;
     cursor: pointer;
 
-    @media (min-width: $screen-768){
+
+    @include laptop{
       width: 50px;
       height: 50px;
+      margin-left: 12px;
     }
 
-    @media (min-width: $screen-1280){
+    @include desktop{
       display: none;
     }
   }

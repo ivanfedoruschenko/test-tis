@@ -4,38 +4,27 @@
 .body {
   background-color: #1B1B1F;
   font-family: "IBM Plex Sans", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
+  max-width: 1512px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .header {
-  width: 89%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1512px;
+  min-width: 288px;
   display: flex;
   flex-direction: column;
-}
-@media (min-width: 1280px) {
-  .header {
-    width: 82.5%;
-  }
-}
-.header a {
-  text-decoration: none;
-  color: #fff;
+  box-sizing: border-box;
 }
 .header__wrapper {
   width: 100%;
   display: flex;
   margin: 0 auto;
-}
-@media (min-width: 375px) {
-  .header__wrapper {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 .header__background {
   position: absolute;
@@ -43,32 +32,36 @@
   width: 100%;
   top: 0;
   left: 0;
-  aspect-ratio: 320/725;
+  min-height: 690px;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
 }
-@media (min-width: 425px) {
+@media (min-width: 640px) {
   .header__background {
     background-image: url("../../src/blocks/header/header__background_laptop.jpg");
-    aspect-ratio: 768/735;
+    min-height: 997px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .header__background {
     background-image: url("../../src/blocks/header/header__background_desktop.jpg");
-    aspect-ratio: 1512/738;
+    min-height: 1043px;
   }
 }
 .header__container {
-  max-width: 48%;
+  width: 100%;
   display: flex;
   margin: 0;
-  justify-content: space-between;
   align-items: center;
 }
 .header__container:nth-child(3) {
-  margin-left: 28px;
+  justify-content: end;
+}
+@media (min-width: 1280px) {
+  .header__container {
+    gap: 16px;
+  }
 }
 .header__logo {
   margin: 0;
@@ -76,16 +69,16 @@
   width: 96px;
   height: 52px;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .header__logo {
     width: 128px;
-    height: 72px;
+    height: 69px;
   }
 }
 @media (min-width: 1280px) {
   .header__logo {
     width: 148px;
-    height: 84px;
+    height: 80px;
   }
 }
 .header__nav {
@@ -95,35 +88,41 @@
 @media (min-width: 1280px) {
   .header__nav {
     display: flex;
+    margin: 0 0 0 2.6%;
+    gap: 16px;
   }
-}
-.header__menu {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0 32px;
 }
 .header__element {
   color: #fff;
-  font-weight: 500;
-  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  min-width: 94px;
+  font-size: 11px;
   line-height: 21px;
-  min-width: 120px;
+  font-weight: 500;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .header__element {
     font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .header__element {
-    min-width: auto;
+    display: inline-block;
+    max-width: 120px;
     font-size: 14px;
+    box-sizing: border-box;
   }
 }
-.header__element:nth-child(even) {
-  margin: 0 16px;
+.header__element:nth-child(2) {
+  display: none !important;
+}
+@media (min-width: 1360px) {
+  .header__element:nth-child(2) {
+    display: inline-block !important;
+  }
 }
 .header__element_style_underline {
   text-decoration: underline;
@@ -134,6 +133,14 @@
     display: flex !important;
   }
 }
+.header__link {
+  color: #fff;
+  margin: 0;
+  text-decoration: none;
+}
+.header__link_active {
+  color: #F1B83B;
+}
 .header__button {
   width: 160px;
   height: 40px;
@@ -141,25 +148,25 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 @media (min-width: 1280px) {
   .header__button {
     display: flex !important;
   }
 }
-.header__button:nth-child(even) {
-  margin-left: 16px;
-}
 .header__burger {
-  margin-left: 4px;
+  margin: 0 0 0 4px;
   width: 38px;
   height: 38px;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .header__burger {
     width: 50px;
     height: 50px;
+    margin-left: 12px;
   }
 }
 @media (min-width: 1280px) {
@@ -175,7 +182,6 @@
   border: 1px solid;
   border-radius: 50px;
   box-sizing: border-box;
-  padding: 0;
   cursor: pointer;
   color: #fff;
 }

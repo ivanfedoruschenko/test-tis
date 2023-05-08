@@ -1,0 +1,29 @@
+@mixin desktop-mw {
+  @media (min-width: $screen-1360){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $screen-1280){
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $screen-640) {
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media (min-width: 320px){
+    @content;
+  }
+}
+
+@mixin fonts($fz,$lh, $fw){
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+}
