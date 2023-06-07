@@ -1,0 +1,143 @@
+.cabotage{
+  margin: 32px 0 0;
+  padding: 32px 32px 32px 23px;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @include desktop{
+    align-items: end;
+    padding-right: 39px;
+  }
+
+  &__title{
+    margin: 0;
+    color: $text-white-color;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include laptop{
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include desktop{
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle{
+    color: $text-grey-color;
+    margin: 16px 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include laptop{
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 16px;
+    }
+
+    @include desktop{
+      width: 552px;
+      margin-right: 35px;
+    }
+  }
+
+  &__list-title{
+    margin: 32px 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text-white-color;
+
+    @include laptop{
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+
+    @include desktop{
+      font-size: 24px;
+      width: 552px;
+      margin-right: 35px;
+    }
+  }
+
+  &__list{
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+
+    @include laptop{
+      gap: 8px;
+    }
+
+    @include desktop{
+      width: 552px;
+      margin-right: 35px;
+    }
+  }
+
+  &__list-element{
+    position: relative;
+    margin: 0;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-white-color;
+    box-sizing: border-box;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &::before{
+      position: absolute;
+      content: "";
+      background-color: #F1B83B;
+      width: 4px;
+      height: 4px;
+      left: 0;
+      top: 10px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin-left: 10px;
+    }
+  }
+
+  &__background{
+    background-image: url("../../src/blocks/cabotage/cabotage__map-mobile.png");
+    position: absolute;
+    width: 550px;
+    height: 361px;
+    top: 70px;
+    right: -80px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include laptop{
+      top: 14px;
+      right: 0;
+    }
+
+    @include desktop{
+      top: 0;
+      left: -250px;
+      right: auto;
+      min-height: 400px;
+      min-width: 750px;
+    }
+  }
+}

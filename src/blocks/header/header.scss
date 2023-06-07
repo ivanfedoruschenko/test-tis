@@ -28,12 +28,12 @@
 
 
     @include laptop{
-      background-image: url("../../src/blocks/header/header__background_laptop.jpg");
+      background-image: url("../../src/blocks/header/header__background_laptop.svg");
       min-height: 997px;
     }
 
     @include desktop{
-      background-image: url("../../src/blocks/header/header__background_desktop.jpg");
+      background-image: url("../../src/blocks/header/header__background_desktop.svg");
       min-height: 1043px;
     }
   }

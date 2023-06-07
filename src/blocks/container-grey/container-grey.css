@@ -1,0 +1,10 @@
+.container-grey {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #2A2A2F;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+/*# sourceMappingURL=container-grey.css.map */

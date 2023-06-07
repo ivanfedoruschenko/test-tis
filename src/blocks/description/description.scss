@@ -4,11 +4,15 @@
   flex-direction: column;
   margin: 0;
 
+  a{
+    text-decoration: none;
+    min-width: 207px;
+  }
+
   &__chapter{
     display: none;
 
-    @media (min-width: $screen-768){
-      display: flex;
+    @include laptop{
       margin: 82px 0 0;
     }
   }
@@ -40,36 +44,49 @@
     line-height: 32px;
     color: $text-white-color;
 
-    @media (min-width: $screen-768){
-      margin-top: 48px;
+    @include laptop{
+      margin-top: 165px;
       font-size: 34px;
       line-height: 36px;
     }
 
-    @media (min-width: $screen-1024){
-      margin-top: 98px;
+    @include desktop{
+      margin-top: 270px;
       font-size: 38px;
       line-height: 50px;
     }
+  }
 
-    span{
-      color: $text-yellow-color;
+  &__subtitle{
+    margin: 16px 0 0;
+    color: $text-white-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    @include laptop{
+      width: 90%;
+    }
+
+    @include desktop{
+      width: 50%;
     }
   }
 
   &__button-container{
-    margin: 55px 0 0;
+    margin: 51px 0 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
 
-    @media (min-width: $screen-768){
-      margin-top: 32px;
+    @include laptop{
+      margin-top: 40px;
       flex-direction: row;
     }
 
-    @media (min-width: $screen-1024){
-      margin-top: 24px;
+    @include desktop{
+      margin-top: 70px;
     }
   }
 
@@ -80,6 +97,25 @@
     font-size: 14px;
     line-height: 20px;
     margin: 0;
+
+    svg{
+      margin: 0 0 0 12px;
+    }
+
+    &:hover svg{
+      stroke: white;
+    }
+
+    &_grey{
+      background-color: transparent;
+      color: #ADAFB4;
+      border-color: #ADAFB4;
+
+      &:hover{
+        color: $text-white-color;
+        border-color: $text-white-color;
+      }
+    }
 
     @media (min-width: $screen-768){
       max-width: 274px;

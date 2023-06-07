@@ -1,0 +1,123 @@
+.presentation{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0 0;
+  padding: 24px 20px 16px 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @include laptop{
+    padding: 32px 30px 80px 32px;
+  }
+
+  &__title{
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text-white-color;
+
+    @include desktop{
+      font-size: 32px;
+      line-height: 55px;
+    }
+  }
+
+  &__subtitle{
+    margin: 16px 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-grey-color;
+    max-width: 404px;
+    z-index: 20;
+
+    @include laptop{
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include desktop{
+      max-width: 544px;
+    }
+  }
+
+  &__button{
+    margin: 35px 0 0;
+    background-color: transparent;
+    border: 1px solid #F1B83B;
+    border-radius: 50px;
+    color: $text-yellow-color;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 248px;
+    height: 44px;
+
+    @include laptop{
+      font-size: 16px;
+    }
+  }
+
+  &__button-arrow{
+    width: 4px;
+    height: 7px;
+    margin: 0 0 0 14px;
+
+    @include laptop{
+      width: 6px;
+      height: 10px;
+    }
+  }
+
+  &__background{
+    display: none;
+
+    @include laptop{
+      display: block;
+      z-index: 10;
+      position: absolute;
+      background-image: url("../../src/blocks/presentation/presentation__background_laptop.svg");
+      min-width: 62%;
+      min-height: 361px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 0;
+      right: 0;
+    }
+
+    @include desktop{
+      background-image: url("../../src/blocks/presentation/presentation__background_desktop.svg");
+      min-width: 75%;
+    }
+  }
+
+  &__img{
+    display: none;
+
+    @include laptop{
+      display: block;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("../../src/blocks/presentation/presentation__img-book_laptop.svg");
+      z-index: 15;
+      min-width: 50%;
+      height: 350px;
+      right: 0;
+      bottom: 0;
+    }
+
+    @include desktop{
+      background-image: url("../../src/blocks/presentation/presentation__img-book_desktop.svg");
+      min-width: 650px;
+      right: 60px;
+      top: 0;
+      height: 350px;
+    }
+  }
+}

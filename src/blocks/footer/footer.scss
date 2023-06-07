@@ -1,152 +1,143 @@
 .footer{
-  width: 100%;
   max-width: 1512px;
+  width: 100%;
+  padding: 0 5% 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
   margin: 32px auto 0;
   background-color: #2A2A2F;
   position: relative;
   z-index: 1;
 
-
-  &__wrapper{
-    display: flex;
-    margin: 0;
-    flex-direction: column;
-    width: 89%;
-    z-index: 10;
-
-    @media (min-width: $screen-1280) {
-      width: 79%;
-      flex-direction: row;
-      border-bottom: 1px solid #686872;
-      margin-top: 47px;
-      padding-bottom: 49px;
-    }
+  @include desktop{
+    min-height: 319px;
   }
 
   &__container{
+    margin: 0;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    padding: 32px 0 0;
-    margin: 0;
-    width: 100%;
-    z-index: 10;
 
-    @media (min-width: $screen-768) {
-      flex-direction: row;
+    @include laptop{
+      display: grid;
+      column-gap: 32px;
+      grid-template-columns: 78px auto auto auto;
+      grid-template-rows: auto auto;
+      justify-items: start;
       align-items: start;
-      flex-wrap: wrap;
+      margin-bottom: 42px!important;
+      row-gap: 32px;
     }
 
-    @media (min-width: $screen-1280) {
-      justify-content: start;
-      gap: 77px;
-      max-width: 70%;
-      padding-top: 0;
+    @include desktop{
+      margin-top: 47px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
     }
   }
 
   &__logo{
     width: 78px;
+    align-self: start;
     aspect-ratio: 78/44;
+    margin: 0;
+
+    @include desktop{
+      margin-right: 60px;
+    }
   }
 
   &__menu{
-    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    margin: 25px 0 0;
     list-style: none;
-    width: 58%;
-    gap: 12px;
-
-    @media (min-width: $screen-768) {
-      width: 83%;
-      margin-top: 0;
-      height: 130px;
-      flex-wrap: wrap;
-      row-gap: 16px;
-      column-gap: 45px;
-      box-sizing: border-box;
-      margin-left: 32px;
-    }
-
-    @media (min-width: $screen-1280) {
-      margin-left: 0;
-      column-gap: 40px;
-      width: 75%;
-    }
-
-    a{
-      text-decoration: none;
-      color: $text-white-color;
-    }
-
+    padding: 0;
+    row-gap: 6px;
   }
 
   &__menu-element{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 20px;
-    margin: 0;
+    max-width: 184px;
+  }
 
-    @media (min-width: $screen-768) {
-      font-size: 14px;
-      flex-wrap: wrap;
-      max-width: 33%;
-    }
-
-    @media (min-width: $screen-1280) {
-      max-width: 33%;
+  &__menu-element_style_active-mobile{
+    @include laptop{
+      display: none;
     }
   }
 
-  &__two-columns{
-    display: flex;
-    border-bottom: 1px solid #686872;
-    flex-direction: column;
-    width: 100%;
-    margin: 32px 0 0;
-    z-index: 10;
-    padding-bottom: 47px;
-    gap: 24px;
-    box-sizing: border-box;
+  &__menu_style_disabled{
+    display: none;
 
-    @media (min-width: $screen-768) {
-      flex-direction: row;
-      gap: 75px;
-      border-bottom:  1px solid #333338;
-      justify-content: end;
-      padding-bottom: 42px;
-      padding-right: 40px;
+    @include laptop{
+      display: block;
     }
+  }
 
-    @media (min-width: $screen-1280) {
-      padding-right: 0;
-      padding-bottom: 0;
-      width: 30%;
-      gap: 60px;
-      margin-top: 0;
-      padding-left: 51px;
+  &__menu-element_margin{
+    margin-top: 39px  !important;
+
+    @include laptop{
+      margin-top: 0 !important;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+  }
+
+  &__link_style_white{
+    color: $text-white-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__link_style_grey{
+    color: $text-grey-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include laptop{
+      color: $text-white-color;
+      font-weight: 500;
     }
   }
 
   &__branch{
-    padding: 0;
-    list-style: none;
     margin: 0;
-    box-sizing: border-box;
-    max-width: 50%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 
-    @media (min-width: $screen-768) {
-      max-width: 25%;
+    &_margin{
+      margin-top: 26px;
+
+      @include laptop{
+        margin-top: 0;
+      }
     }
+  }
 
-    @media (min-width: $screen-1280) {
-      max-width: 55%;
+  &__branch-moscow{
+    margin: 41px 0 0;
+    @include laptop{
+      margin-top: 0;
+      grid-column: 3/4;
+      width: 160px;
+    }
+  }
+
+  &__branch-vl{
+    @include laptop{
+      grid-column: 4/5;
+      width: 185px;
     }
   }
 
@@ -155,23 +146,13 @@
     font-size: 12px;
     line-height: 19px;
     color: $text-grey-color;
-
-    @media (min-width: $screen-768) {
-      font-size: 14px;
-    }
   }
 
   &__element-contact{
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
-    color:$text-white-color;
-    margin: 8px 0 0;
-
-    @media (min-width: $screen-768) {
-      font-size: 14px;
-      margin-top: 16px;
-    }
+    color: $text-white-color;
   }
 
   &__element-address{
@@ -179,69 +160,90 @@
     font-size: 12px;
     line-height: 16px;
     color: $text-grey-color;
-    margin: 8px 0 0;
-
-    @media (min-width: $screen-768) {
-      font-size: 14px;
-      margin-top: 16px;
-    }
-
-    @media (min-width: $screen-1280) {
-      line-height: 19px;
-    }
   }
 
   &__copyright{
+    margin:30px 0 0;
+    border-top: 1px solid #686872;
+    padding: 11px 0;
     display: flex;
     flex-direction: column;
-    margin: 16px 0 20px;
-    width: 89%;
-    z-index: 5;
-
-    @media (min-width: $screen-768) {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-top: 14px;
-    }
-
-    @media (min-width: $screen-1280) {
-      justify-content: start;
-      margin-top: 28px;
-      margin-bottom: 27px;
-      width: 79%;
-    }
-  }
-
-  &__copyright-list{
-    list-style: none;
-    padding: 0;
-    margin: 18px 0 0;
     gap: 6px;
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
 
-    @media (min-width: $screen-768) {
-      flex-direction: row;
-      margin-top: 0;
-      gap: 25px;
+    @include laptop{
+      column-gap: 32px;
+      display: grid;
+      grid-template-columns: 78px auto auto auto;
+      grid-template-rows: 1fr;
     }
 
-    @media (min-width: $screen-1280) {
-      margin-left: 100px;
-      gap: 24px;
+    @include desktop{
+      gap: 0;
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
     }
   }
 
   &__copyright-element{
-    color:$text-grey-color;
-    margin: 0;
+    text-decoration: none;
     font-weight: 400;
     font-size: 12px;
     line-height: 19px;
-    text-decoration: none;
+    color: $text-grey-color;
 
-    @media (min-width: $screen-768) {
+    @include desktop{
       font-size: 14px;
+    }
+
+
+    &_style_confidentiality{
+      @include laptop{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        width: 185px;
+      }
+      @include desktop{
+        order: 2;
+        margin-left: 170px;
+        width: max-content;
+      }
+    }
+
+    &_style_agreement{
+      @include laptop {
+        grid-column: 4/5;
+        grid-row: 1/2;
+        width: 185px;
+      }
+
+      @include desktop{
+        order: 3;
+        margin-left: 24px;
+        width: max-content;
+      }
+    }
+
+    &_style_copyright{
+      @include laptop{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 175px;
+      }
+
+      @include desktop{
+        order: 1;
+      }
+    }
+  }
+
+  &__copyright-element_margin{
+    margin: 19px 0 24px;
+
+    @include laptop{
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -256,12 +258,12 @@
     background-size: cover;
     z-index: -1;
 
-    @media (min-width: $screen-768) {
+    @include laptop{
       width: 206px;
       aspect-ratio: 206/227;
     }
 
-    @media (min-width: $screen-1280) {
+    @include desktop{
       width: 291px;
       aspect-ratio: 291/316;
     }

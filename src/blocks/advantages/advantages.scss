@@ -1,0 +1,105 @@
+.advantages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 68px 0 0;
+
+  @include laptop{
+    padding-top: 108px;
+  }
+
+  @include desktop{
+    padding-top: 220px;
+  }
+
+  &__container{
+    display: flex;
+    margin: 32px 0 0;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    width: 100%;
+
+    @include laptop{
+      justify-content: space-between;
+    }
+
+    @include desktop{
+      margin-top: 40px;
+    }
+  }
+
+  &__element{
+    display: flex;
+    gap: 12px;
+    flex-basis: 320px;
+
+    &:nth-child(even){
+      gap: 8px;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $text-white-color;
+    margin: 0;
+
+    @include laptop{
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__paragraph{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: $text-white-color;
+    margin: 0;
+
+    @include laptop{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include desktop{
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    span{
+      color: $text-yellow-color;
+      font-weight: 500;
+      font-size: 16px;
+
+      @include laptop{
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__img-security{
+    width: 32px;
+    height: 39px;
+  }
+
+  &__img-chain{
+    width: 39px;
+    height: 39px;
+  }
+
+  &__img-label{
+    width: 32px;
+    height: 40px;
+  }
+
+  &__img-speed{
+    width: 40px;
+    height: 32px;
+  }
+}

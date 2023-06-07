@@ -1,0 +1,78 @@
+.other{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+  width: 100%;
+
+  @include laptop{
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  @include desktop{
+    margin-bottom: 171px;
+    margin-top: 120px;
+  }
+
+  &__title{
+    align-self: start;
+    color: $text-white-color;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+
+    @include laptop{
+      font-size: 32px;
+      line-height: 55px;
+    }
+  }
+
+  &__container{
+    margin: 24px 0 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    @include laptop{
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    @include desktop{
+     gap: 12px;
+    }
+  }
+
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 20px;
+    box-sizing: border-box;
+    min-width: 286px;
+    height: 50px;
+    background: #2B2B2E;
+    border-radius: 41px;
+    text-decoration: none;
+    color: #E2E2E2;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+
+
+    &:hover{
+      opacity: 0.8;
+    }
+
+    @include laptop{
+      font-size: 16px;
+      min-width: max-content;
+
+    }
+  }
+}
