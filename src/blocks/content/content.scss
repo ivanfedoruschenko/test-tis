@@ -4,12 +4,40 @@
   position: relative;
   z-index: 1;
 
+  @include desktop{
+    background-color: transparent;
+    padding: 0;
+
+    li{
+      max-width: 198px;
+      height: 40px;
+      width: 100%;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    li:hover{
+      background-color: #F1B83B;
+      color: #1B1B1F;
+    }
+  }
+
+
   &__title{
     margin: 0;
     color: $text-white-color;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+
+    @include desktop{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      &::after{
+        content: " «Тис Лоджистик»";
+      }
+    }
   }
 
   &__subtitle{
@@ -18,6 +46,15 @@
     line-height: 24px;
     color: $text-grey-color;
     margin: 12px 0 0;
+
+    @include laptop{
+      max-width: 527px;
+    }
+
+    @include desktop{
+      font-size: 20px;
+      max-width: 100%;
+    }
   }
 
   &__list-title{
@@ -26,6 +63,10 @@
     font-size: 16px;
     line-height: 24px;
     color: $text-white-color;
+
+    @include desktop{
+      display: none;
+    }
   }
 
   &__list{
@@ -38,6 +79,30 @@
     flex-wrap: wrap;
     max-height: 280px;
     max-width: 280px;
+
+    @include desktop{
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(3,40px);
+      max-width: 100%;
+      width: 100%;
+      flex-direction: row;
+      margin-top: 40px;
+      row-gap: 12px;
+      justify-content: space-between;
+      max-height: 144px;
+    }
+  }
+
+  &__flag{
+    display: none;
+
+    @include desktop{
+      display: flex;
+      width: 32px;
+      height: 32px;
+      margin: 0 10px 0 0;
+    }
   }
 
   &__list-element{
@@ -50,6 +115,14 @@
     color: $text-white-color;
     box-sizing: border-box;
 
+    @include desktop{
+      padding-left: 0;
+      display: flex;
+      background: #47474B;
+      justify-content: center;
+      align-items: center;
+    }
+
     &::before{
       position: absolute;
       content: "";
@@ -61,6 +134,10 @@
       border-radius: 50%;
       box-sizing: border-box;
       margin-left: 10px;
+
+      @include desktop{
+        display: none;
+      }
     }
   }
   &__background{
@@ -73,5 +150,46 @@
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include laptop{
+      background-image: url("../../src/blocks/content/content__background_map-laptop.png");
+      min-width: 412px;
+      min-height: 438px;
+    }
+
+    @include desktop{
+      display: none;
+    }
+  }
+
+  &__button{
+    display: none;
+
+    @include desktop{
+      display: flex;
+      border: 2px solid #47474B;
+      border-radius: 12px;
+      background-color: transparent;
+      justify-content: center;
+      align-items: center;
+      color: #47474B;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__map{
+    display: none;
+
+    @include desktop{
+      display: flex;
+      width: 100%;
+      object-fit: cover;
+      box-sizing: border-box;
+      margin: 0;
+    }
   }
 }

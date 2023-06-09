@@ -22,4 +22,11 @@
       border-color: #8C0912 !important;
     }
   }
+
+  &_style_yellow{
+    &:hover{
+      border-color: #F1B83B;
+      color: #F1B83B;
+    }
+  }
 }

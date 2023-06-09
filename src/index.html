@@ -5,14 +5,14 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>TIS</title>
-  <link rel="stylesheet" href="./src/pages/index.css">
+
 </head>
 <body class="body">
   <header class="header">
     <div class="header__wrapper">
       <div class="header__background"></div>
       <div class="header__container">
-        <img src="src/blocks/header/header__logo.svg" alt="Тис лого" class="header__logo">
+        <a href="#"><img src=<%=require("./blocks/header/header__logo.svg")%> alt="Тис лого" class="header__logo"></a>
         <nav class="header__nav">
           <a class="header__link" href="#">О&nbsp;компании</a>
           <a class="header__link header__link_active" href="#">Услуги</a>
@@ -24,9 +24,9 @@
       <div class="header__container">
         <p class="header__element">8&nbsp;(800)&nbsp;234-80-70</p>
         <p class="header__element header__element_style_underline">info@tislogistic.ru</p>
-        <button class="button header__button button_transparent">Обратный звонок</button>
+        <button class="button button_style_yellow header__button button_transparent">Обратный звонок</button>
         <button class="button header__button button_red">Расчет доставки</button>
-        <img src="src/blocks/header/header__icon-menu.svg" alt="Меню" class="header__burger">
+        <img src=<%=require("./blocks/header/header__icon-menu.svg")%> alt="Меню" class="header__burger">
       </div>
     </div>
   </header>
@@ -34,6 +34,8 @@
     <section class="description">
       <div class="description__chapter">
         <p class="description__chapter-element">Главная страница</p>
+        <div class="description__point"></div>
+        <p class="description__chapter-element">Услуги</p>
         <div class="description__point"></div>
         <p class="description__chapter-element description__chapter-element_color_yellow">Морские грузоперевозки</p>
       </div>
@@ -57,7 +59,7 @@
         <div class="advantages__container">
 
           <div class="advantages__element">
-            <img src="./src/blocks/advantages/advantages__img-security.png" class="advantages__img-security" alt="Надежность">
+            <img src=<%=require("./blocks/advantages/advantages__img-security.png")%> class="advantages__img-security" alt="Надежность">
             <p class="advantages__paragraph">
               <span>Надёжность:</span> грузы находятся
               не только на палубе судна, но и в трюме,
@@ -65,20 +67,20 @@
           </div>
 
           <div class="advantages__element">
-            <img src="./src/blocks/advantages/advantages__img-chain.png" class="advantages__img-chain" alt="Универсальность">
+            <img src=<%=require("./blocks/advantages/advantages__img-chain.png")%> class="advantages__img-chain" alt="Универсальность">
             <p class="advantages__paragraph">
               <span>Универсальность:</span> этот способ отлично подходит в том случае,
               если необходимо комбинировать отправления</p>
           </div>
 
           <div class="advantages__element">
-            <img src="./src/blocks/advantages/advantages__img-label.png" class="advantages__img-label" alt="Надежность">
+            <img src=<%=require("./blocks/advantages/advantages__img-label.png")%> class="advantages__img-label" alt="Надежность">
             <p class="advantages__paragraph">
               <span>Удалённость:</span> отлично подходят для отправки в удалённые пункты</p>
           </div>
 
           <div class="advantages__element">
-            <img src="./src/blocks/advantages/advantages__img-speed.png" class="advantages__img-speed" alt="Надежность">
+            <img src=<%=require("./blocks/advantages/advantages__img-speed.png")%> class="advantages__img-speed" alt="Надежность">
             <p class="advantages__paragraph">
               <span>Скорость:</span> собственный контейнерный парк значительно удешевляет и ускоряет перевозку</p>
           </div>
@@ -90,25 +92,27 @@
       <p class="content__subtitle">Все страны поставок, позволяющие доставлять грузы в контейнерах по всему миру!</p>
       <p class="content__list-title">Среди доступных направлений</p>
       <ul class="content__list">
-        <li class="content__list-element">Япония</li>
-        <li class="content__list-element">Корея</li>
-        <li class="content__list-element">Китай</li>
-        <li class="content__list-element">Малайзия</li>
-        <li class="content__list-element">Тайвань</li>
-        <li class="content__list-element">Индонезия</li>
-        <li class="content__list-element">Въетнам</li>
-        <li class="content__list-element">Индия</li>
-        <li class="content__list-element">Турция</li>
-        <li class="content__list-element">США</li>
-        <li class="content__list-element">Канада</li>
-        <li class="content__list-element">Африка</li>
-        <li class="content__list-element">ОАЭ</li>
-        <li class="content__list-element">Европа</li>
-        <li class="content__list-element">Чили</li>
-        <li class="content__list-element">Камбоджа</li>
-        <li class="content__list-element">Бразилия</li>
-      </ul>
+        <li class="content__list-element" id="japan"><img class="content__flag" src=<%=require("./blocks/content/flags/japan.png")%> alt="Япония">Япония</li>
+        <li class="content__list-element" id="korea"><img class="content__flag" src=<%=require("./blocks/content/flags/south-korea.png")%> alt="Южная корея">Корея</li>
+        <li class="content__list-element" id="china"><img class="content__flag" src=<%=require("./blocks/content/flags/china.png")%> alt="Китай">Китай</li>
+        <li class="content__list-element" id="malaysia"><img class="content__flag" src=<%=require("./blocks/content/flags/malaysia.png")%> alt="Малайзия">Малайзия</li>
+        <li class="content__list-element" id="taiwan"><img class="content__flag" src=<%=require("./blocks/content/flags/taiwan.png")%> alt="Тайвань">Тайвань</li>
+        <li class="content__list-element" id="indonesia"><img class="content__flag" src=<%=require("./blocks/content/flags/indonesia.png")%> alt="Индонезия">Индонезия</li>
+        <li class="content__list-element" id="vietnam"><img class="content__flag" src=<%=require("./blocks/content/flags/vietnam.png")%> alt="Въетнам">Въетнам</li>
+        <li class="content__list-element" id="india"><img class="content__flag" src=<%=require("./blocks/content/flags/india.png")%> alt="Индия">Индия</li>
+        <li class="content__list-element" id="turkey"><img class="content__flag" src=<%=require("./blocks/content/flags/turkey.png")%> alt="Турция">Турция</li>
+        <li class="content__list-element" id="usa"><img class="content__flag" src=<%=require("./blocks/content/flags/usa.png")%> alt="США">США</li>
+        <li class="content__list-element" id="canada"><img class="content__flag" src=<%=require("./blocks/content/flags/canada.png")%> alt="Канада">Канада</li>
+        <li class="content__list-element" id="africa"><img class="content__flag" src=<%=require("./blocks/content/flags/south-africa.png")%> alt="Африка">Африка</li>
+        <li class="content__list-element" id="uae"><img class="content__flag" src=<%=require("./blocks/content/flags/uae.png")%> alt="ОАЭ">ОАЭ</li>
+        <li class="content__list-element" id="europe"><img class="content__flag" src=<%=require("./blocks/content/flags/europe.png")%> alt="Европа">Европа</li>
+        <li class="content__list-element" id="chile"><img class="content__flag" src=<%=require("./blocks/content/flags/chile.png")%> alt="Чили">Чили</li>
+        <li class="content__list-element" id="cambodga"><img class="content__flag" src=<%=require("./blocks/content/flags/cambodga.png")%> alt="Камбоджа">Камбоджа</li>
+        <li class="content__list-element" id="brasil"><img class="content__flag" src=<%=require("./blocks/content/flags/brazil.png")%> alt="Бразилия">Бразилия</li>
+        <li><button class="content__button">Начать расчет</button>
+      </ul>)%>
       <div class="content__background"></div>
+      <img src=<%=require("./blocks/content/maps/start-map.png")%> alt="Карта" class="content__map">
     </section>
 
     <section class="container-grey cabotage">
@@ -155,7 +159,7 @@
       <h2 class="presentation__title">Скачать презентацию компании</h2>
       <p class="presentation__subtitle">Перевозка опасных грузов — задача непростая. Нужно точно соблюсти все меры безопасности,
         предоставить сертификаты, промаркировать контейнеры.</p>
-      <button class="presentation__button">Скачать<img class="presentation__button-arrow" src="./src/blocks/presentation/presentation__button-arrow.svg" alt="Стрека"></button>
+      <a href="https://disk.yandex.ru/i/t63Hzq9eRKoR1Q/download" target="_blank" class="presentation__button">Скачать<img class="presentation__button-arrow" src=<%=require("./blocks/presentation/presentation__button-arrow.svg")%> alt="Стрека"></a>
       <div class="presentation__img"></div>
       <div class="presentation__background"></div>
     </section>
@@ -181,7 +185,7 @@
 
     <div class="footer__container">
 
-        <img class="footer__logo footer__logo_grid-area_logo" src="src/blocks/footer/footer__logo.svg" alt="Логотип">
+        <img class="footer__logo" src=<%=require("./blocks/footer/footer__logo.svg")%> alt="Логотип">
 
         <ul class="footer__menu footer__menu_margin">
           <li class="footer__menu-element"><a class="footer__link footer__link_style_white" href="#">О компании</a></li>
@@ -225,5 +229,6 @@
       <div class="footer__lable"></div>
     </div>
   </footer>
+
 </body>
 </html>

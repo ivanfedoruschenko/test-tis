@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 32px auto 0;
+  margin: 0 auto;
   background-color: #2A2A2F;
   position: relative;
   z-index: 1;
@@ -20,6 +20,7 @@
     flex-direction: column;
 
     @include laptop{
+      margin-top: 46px;
       display: grid;
       column-gap: 32px;
       grid-template-columns: 78px auto auto auto;
@@ -43,7 +44,11 @@
     width: 78px;
     align-self: start;
     aspect-ratio: 78/44;
-    margin: 0;
+    margin: 32px 0 0;
+
+    @include laptop{
+      margin-top: 5px;
+    }
 
     @include desktop{
       margin-right: 60px;
@@ -56,11 +61,31 @@
     flex-direction: column;
     list-style: none;
     padding: 0;
-    row-gap: 6px;
+    row-gap: 7px;
+
+    @include laptop{
+      row-gap: 15px;
+    }
+  }
+
+  &__menu_margin{
+    margin-top: 25px;
+
+    @include laptop{
+      margin-top: 0;
+    }
   }
 
   &__menu-element{
     max-width: 184px;
+  }
+
+  &__menu-element_margin-first{
+    margin-top: 7px;
+
+    @include laptop{
+      margin-top: 0;
+    }
   }
 
   &__menu-element_style_active-mobile{
@@ -87,6 +112,10 @@
 
   &__link{
     text-decoration: none;
+
+    &:hover{
+      color: $text-yellow-color;
+    }
   }
 
   &__link_style_white{
@@ -122,6 +151,10 @@
       @include laptop{
         margin-top: 0;
       }
+    }
+
+    @include laptop{
+      row-gap: 15px;
     }
   }
 

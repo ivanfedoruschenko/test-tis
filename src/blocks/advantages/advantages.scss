@@ -22,9 +22,12 @@
 
     @include laptop{
       justify-content: space-between;
+
     }
 
     @include desktop{
+      justify-content: start;
+      flex-wrap: nowrap;
       margin-top: 40px;
     }
   }
@@ -32,7 +35,7 @@
   &__element{
     display: flex;
     gap: 12px;
-    flex-basis: 320px;
+    max-width: 320px;
 
     &:nth-child(even){
       gap: 8px;

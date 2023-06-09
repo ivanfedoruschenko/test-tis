@@ -13,7 +13,12 @@
     display: none;
 
     @include laptop{
-      margin: 82px 0 0;
+      margin: 63px 0 0;
+      display: flex;
+    }
+
+    @include desktop{
+      margin-top: 82px;
     }
   }
 
